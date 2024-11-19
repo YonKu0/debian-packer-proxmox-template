@@ -155,13 +155,13 @@ source "proxmox-iso" "debian12" {
   cloud_init_storage_pool = "${var.storage_pool}"
 
   # VM Configuration
-  cores           = "${var.nb_core}"
-  memory          = "${var.nb_ram}"
+  cores           = "${var.num_cores}"
+  memory          = "${var.memory_size}"
   cpu_type        = "${var.cpu_type}"
   machine         = "${var.machine_default_type}"
   os              = "${var.os_type}"
   scsi_controller = "${var.scsi_controller_type}"
-  sockets         = "${var.nb_cpu}"
+  sockets         = "${var.num_cpu}"
   tags            = "${var.tags}"
 
   # VM Metadata
