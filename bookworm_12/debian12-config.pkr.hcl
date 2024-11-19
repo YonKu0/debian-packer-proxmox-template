@@ -226,13 +226,13 @@ build {
   # Use these provisioners to upload cloud-init configuration files to the VM.
   # These files specify datasource options for cloud-init.
 
-  # provisioner "file" {
-  #   source      = "99_pve.cfg"
-  #   destination = "/etc/cloud/cloud.cfg.d/99_pve.cfg"
-  # }
+  provisioner "file" {
+    source      = "99_pve.cfg"
+    destination = "/etc/cloud/cloud.cfg.d/99_pve.cfg"
+  }
 
-  # provisioner "file" {
-  #   source      = "cloud.cfg"
-  #   destination = "/etc/cloud/cloud.cfg"
-  # }
+  provisioner "file" {
+    source      = "cloud.cfg"
+    destination = "/etc/cloud/cloud.cfg"
+  }
 }
